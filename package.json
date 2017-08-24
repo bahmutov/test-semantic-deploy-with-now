@@ -101,7 +101,7 @@
     "semantic-release": "7.0.2",
     "simple-commit-message": "3.3.1",
     "standard": "10.0.3",
-    "url-to-sha": "2.0.0"
+    "url-to-sha": "2.1.0"
   },
   "dependencies": {
     "serve": "6.0.6"
