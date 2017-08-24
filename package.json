@@ -94,5 +94,10 @@
   },
   "dependencies": {
     "serve": "6.0.6"
+  },
+  "now": {
+    "env": {
+      "NODE_ENV": "production"
+    }
   }
 }
