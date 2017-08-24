@@ -62,9 +62,11 @@
     "unit": "ava test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-deploy": "semantic-action pre && npm run deploy && semantic-action post",
+    "predeploy": "npm run git-last",
     "deploy": "now-pipeline --alias test-semantic-deploy-with-now-123 --test 'npm run unit'",
     "start": "serve public",
-    "git-last": "git-last -f public/build.json"
+    "git-last": "git-last -f public/build.json",
+    "postgit-last": "cat public/build.json"
   },
   "release": {
     "analyzeCommits": "simple-commit-message",
