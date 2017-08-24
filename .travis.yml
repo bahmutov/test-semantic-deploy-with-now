@@ -11,7 +11,8 @@ before_script:
 script:
   - npm start &
   - npm test
-# after_success:
+after_success:
+  - npm run semantic-deploy
 #   - npm run semantic-release
 branches:
   except:

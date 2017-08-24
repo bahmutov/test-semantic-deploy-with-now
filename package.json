@@ -61,6 +61,8 @@
     "test": "npm run unit",
     "unit": "ava test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-deploy": "semantic-action pre && npm run deploy && semantic-action post",
+    "deploy": "now-pipeline --alias test-semantic-deploy-with-now-123 --test 'npm run unit'",
     "start": "serve public",
     "git-last": "git-last -f public/build.json"
   },
@@ -70,6 +72,11 @@
     "verifyRelease": {
       "path": "dont-crack",
       "test-against": []
+    },
+    "getLastRelease": {
+      "path": "url-to-sha",
+      "url": "https://test-semantic-deploy-with-now-123.now.sh/build.json",
+      "property": "id"
     }
   },
   "devDependencies": {
