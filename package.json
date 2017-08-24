@@ -60,7 +60,7 @@
     "secure": "nsp check",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "test": "npm run unit",
-    "unit": "mocha src/*-spec.js",
+    "unit": "ava test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "start": "serve public",
     "git-last": "git-last -f public/build.json"
@@ -74,6 +74,7 @@
     }
   },
   "devDependencies": {
+    "ava": "0.22.0",
     "ban-sensitive-files": "1.9.0",
     "dependency-check": "2.9.1",
     "deps-ok": "1.2.1",
@@ -81,6 +82,7 @@
     "git-issues": "1.3.1",
     "git-last": "1.0.1",
     "github-post-release": "1.13.1",
+    "got": "7.1.0",
     "license-checker": "13.0.3",
     "mocha": "3.5.0",
     "now-pipeline": "1.8.0",
