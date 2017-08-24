@@ -29,8 +29,7 @@
     "node": ">=6"
   },
   "files": [
-    "src/*.js",
-    "!src/*-spec.js"
+    "public"
   ],
   "homepage": "https://github.com/bahmutov/test-semantic-deploy-with-now#readme",
   "keywords": [
